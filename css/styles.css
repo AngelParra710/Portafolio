@@ -1,0 +1,303 @@
+/*font-family: 'Fira Code', monospace;
+font-family: 'Roboto', sans-serif;
+*/
+:root{
+    --background:#021524;
+    --backgroundcontainer:#091f30;
+    --colorblue:#0e61a1;
+    --bluetext: #347CF8;
+    --yellowText:#FFCA3A;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--bluetext), var(--backgroundcontainer));
+    border-radius: 4px;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.containercenter{
+    background-color: var(--backgroundcontainer);
+    border-radius: 10px;
+    width: 70%;
+    height: 500px;
+}
+.header{
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 19%;
+    background-color: var(--bluetext);
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid white;
+}
+.nav-menu{
+   width: 80%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.avatar{
+    background-image: url(/resources/circle-meyellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+}
+.logo{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: 'Fira Code', monospace;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline;
+    padding-right: 15px;
+    width: 100%;
+}
+.listmenu{
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 1s ease-in;
+}
+.listmenu:hover{
+    border-bottom: 2px solid black;
+}
+.containersection{
+    width: 100%;
+}
+.body{
+    width: 90%;
+    margin: 20px auto 0;
+    height: 260px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    color: var(--bluetext);
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.name{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.me{
+    font-size: 27px;
+    color: var(--bluetext);
+
+}
+.remark{
+    color: var(--yellowText);
+}
+.about{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.description{
+    color: var(--yellowText);
+    font-size: 20px;
+}
+.container-social{
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+}
+.img-social{
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    z-index: -10;
+    background-image: url(/resources/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+/*Sobre mi*/
+.about-me{
+    color: white;
+    width: 100%;
+    height: 100vh;
+    padding-top: 20px;
+}
+.content{
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+}
+.divdescription{
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+}
+.about-title{
+   font-size: 40px;
+   color: var(--yellowText);
+}
+.about-description{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/*Skills*/
+
+.about-grid h3{
+    margin-top: 20px;
+    font-size: 30px;
+}
+.container-skills{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr);
+    row-gap: 25px;
+    justify-content: center;
+}
+.figure-skills img{
+    width: 100px;
+    height: 100px;
+}
+
+
+/*Project*/
+.section-project{
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.container-cards-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+/*QUERYS */
+
+@media screen and (max-width: 1100px) {
+    .container-social{
+        width: 65%;
+    }
+
+    .containercenter{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .body{
+        display: block;
+        height: 300px;
+        text-align: center;
+    }
+    .container-social{
+        width: 70%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .avatar{
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+    }
+    .title{
+        font-size: 40px;
+    }
+    .name{
+        font-size: 20px;
+    }
+    .me{
+        font-size: 30px;
+    }
+    ul{
+        list-style-type: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+    li{
+        display: inline;
+        padding-right: 10px;
+        
+    }
+    .nav-menu{
+        width: 90%;
+        text-align: center;
+    }
+    nav{
+        width: 100%;
+    }
+    .logo{
+        color: white;
+        font-size: 30px;
+    }
+    .listmenu{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 500px){
+    .title{
+        font-size: 30px;
+    }
+    .name{
+        font-size: 20px;
+    }
+    .me{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .title{
+        font-size: 30px;
+    }
+    .name{
+        font-size: 19px;
+    }
+    .me{
+        font-size: 20px;
+    }
+}
