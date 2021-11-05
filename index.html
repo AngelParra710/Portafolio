@@ -4,127 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Roboto:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="./css/aboutme.css">
     <title>Portafolio</title>
 </head>
 <body>
-    <section class="main" id="tab1">
-        <div class="maincontainer">
-            <div class="cardmain">
-                <nav>
-                    <div class="containernav">
-                        <h2>(A) => {J}</h2>
-                    <navbar>
-                        <ul>
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#tab2">Sobre mi</a></li>
-                            <li><a href="#tab3">Proyectos</a></li>
-                        </ul>
-                    </navbar>
-                    </div>
-                </nav>
-                <div class="contain">
-                    <div class="cardcontain">
-                        <div class="containavatar">
-                            <img src="./resources/circle-meyellow.png" alt="">
+    <section class="main">
+        <nav>
+            <div class="main-container">
+                <p>A =><span>{J}</span></p>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#about-me">Sobre mi</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="body">
+            <div class="body-container">
+                <h1>Hola <span>Mundo</span></h1>
+                <div class="body-description">
+                    <figure>
+                        <img src="./resources/circle-meyellow.png" alt="">
+                    </figure>
+                    <div class="description">
+                        <h2>Soy Angel <span>Parra</span></h2>
+                        <div class="body-socialnetwork">
+                            <a href="https://github.com/AngelParra710/Portafolio"><img src="./resources/github.png" alt="Github"></a>
+                            <a href="https://www.facebook.com/angeljosue.parramendoza.5"><img src="./resources/facebook.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/angel_josue_parra_mendoza/"><img src="./resources/instagram.png" alt=""></a>
                         </div>
-                        <div class="containdescription">
-                            <h1 class="title">Hola <span class="remark">Mundo</span></h1>
-                            <p class="remark name">Soy Angel Parra</p>
-                            <p class="name">Desarrollador <span class="remark">Full-Stack</span></p>
-                        </div>
-                    </div>
-                    <div class="socialnetworks">
-                        <a href="https://github.com/AngelParra710/Portafolio"><img src="./resources/github.png" alt="Github"></a>
-                        <a href="https://www.facebook.com/angeljosue.parramendoza.5"><img src="./resources/facebook.png" alt="Facebook"></a>
-                        <a href="https://www.instagram.com/angel_josue_parra_mendoza/"><img src="./resources/instagram.png" alt=""></a>
+                        <button class="btn-primary">Descargar CV</button>
                     </div>
                 </div>
             </div>
-            <div class="wave">
-
-            </div>
         </div>
+        <div class="wave"></div>
     </section>
-    <section class="about-me" id="tab2">
-        <div class="content">
-            <h1 class="about-title">Sobre Mi</h1>
-            <div class="divdescription">
-                <p class="about-description">
-                    Hola.. Soy un desarrollador apasionado por su trabajo, me encanta dedicar tiempo a aprender nuevas tecnologias, 
-                    jugar videojuegos, escuchar musica y dibujar.
-                </p>
-                <p class="about-description">
-                    He trabajado en diversos proyectos tanto en aplicaciones moviles, web y de escritorio, destacado mas en el
-                    apartado web y movil, debido a que son mis fuertes.
-                </p>
-                <p class="about-description">
-                    Siempre he sido una persona apasionada, soñadora y dispuesto a realizar y finalizar mis actividades de forma adecuada y en tiempo.
-                </p>
-            </div>
-            <div class="about-grid">
-                <h3>Skills</h3>
-                <div class="container-skills">
-                    <figure class="figure-skills">
-                        <img src="./resources/html.png" alt="Html">
-                        <figcaption>HTML</figcaption>
-                    </figure>
-                    <figure class="figure-skills">
-                        <img src="./resources/css.png" alt="Css">
-                        <figcaption>Css</figcaption>
-                    </figure>
-                    <figure class="figure-skills">
-                        <img src="./resources/js.png" alt="Js">
-                        <figcaption>Js</figcaption>
-                    </figure>
-                    <figure class="figure-skills">
-                        <img src="./resources/android.png" alt="Android">
-                        <figcaption>Android Studio</figcaption>
-                    </figure>
-                    <figure class="figure-skills">
-                        <img src="./resources/react.png" alt="React">
-                        <figcaption>React</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-project" id="tab3">
-        <div class="container-projects">
-            <h1 class="about-title">Proyectos</h1>
-            <div class="container-cards-grid">
-                <article class="card">
-                    <div class="containe-image">
-                        <img src="./resources/createpassword.png" alt="">
-                    </div>
-                    <div class="contain-description">
-                        <p><a href="">Creator Password</a></p>
-                        <p class="description">Aplicacion web que permite crear tus contraseñas con un patron seguro</p>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="containe-image">
-                        <img src="./resources/gestorpagos.png" alt="">
-                    </div>
-                    <div class="contain-description">
-                        <p><a href="">Sistema Control de Pagos</a></p>
-                        <p class="description">Aplicacion web que permite administrar entradas y salidas de tu empresa</p>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="containe-image">
-                        <img src="./resources/gifapp.png" alt="">
-                    </div>
-                    <div class="contain-description">
-                        <p><a href="">Gif App</a></p>
-                        <p class="description">Aplicacion web que permite consumir api de Gif</p>
-                    </div>
-                </article>
-            </div>
-        </div>
+    <section class="about-me" id="about-me">
+        <h1>Sobre <span>Mi</span></h1>
+        <article>
+            <p>Hola me llamo Angel Josue Parra Mendoza</p>
+            <p>Soy desarrollador Front-End y Movil.</p>
+            <p>Me apasiona el aprendizaje por nuevas tecnologias, he desarrollado diversar aplicaciones tanto para web y moviles</p>
+            <p>Ademas que soy un apasionado por los videojuegos en especial Lolsito</p>
+        </article>
     </section>
 </body>
 </html>

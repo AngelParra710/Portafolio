@@ -1,0 +1,21 @@
+:root{
+    --background:#021524;
+    --backgroundcontainer:#091f30;
+    --colorblue:#0e61a1;
+    --bluetext: #347CF8;
+    --yellowText:#FFCA3A;
+    --red:#cf5c51;
+}
+.about-me{
+    width: 100%;
+    height: 100vh;
+    padding-top: 75px;
+    background-color: #F3F4F5;
+    text-align: center;
+}
+.about-me h1{
+    font-size: 60px;
+}
+.about-me span{
+    color: var(--bluetext);
+}
