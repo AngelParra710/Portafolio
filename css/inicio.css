@@ -10,6 +10,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -28,12 +29,13 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb {
     background: linear-gradient(var(--bluetext), var(--backgroundcontainer));
     border-radius: 4px;
-}
+} 
 nav p{
     font-family: 'Fira Code';
     font-size: 27px;
 }
 .main{
+    position: relative;
     width: 100%;
     min-height: 100vh;
     background-color: var(--backgroundcontainer);
@@ -155,89 +157,27 @@ figure img{
     bottom: 0;
     left: 0;
 }
-
-/* ABOUT ME */
-
-
-.about-me{
-    width: 100%;
-    min-height: 100vh;
-    background-color: #F3F4F5;
-    text-align: center;
-}
-.about-me h1{
-    padding-top: 70px;
-    font-size: 60px;
+/*QUERYS*/
+@media screen and (max-width: 1000px) {
+    .description h2{
+        font-size: 40px;
+        font-family: inherit;
+    }
 }
 
-.about-me span{
-    color: var(--bluetext);
-}
-.about-me article{
-    display: flex;
-    width: 90%;
-    margin: 40px auto;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.about-description{
-    text-align: center;
-    width: 50%;
-}
-.about-me article img::before{
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    content: '';
-    color: blue;
-    top: -10px;
-    left: -140px;
-}
-.about-me article img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-}
-.about-description p{
-    margin: 7px;
-}
-/* SKILLS */
-.skills{
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--backgroundcontainer);
-    text-align: center;
-}
-.skills h1{
-    padding-top: 70px;
-    font-size: 40px;
-}
-article{
-    width: 80%;
-    margin: 0 auto;
-}
-.container-cards{
-    padding-top: 40px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 30px;
-    justify-items: center;
-}
-.card{
-    color: var(--bluetext);
-    background-color: white;
-    width: 140px;
-    height: 140px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 8px rgba(255, 255, 255, 0.472);
-    transition-duration: 0.5s;
-}
-.card:hover{
-    transform: scale(1.1);
-}
-
-.card figure img{
-    width: 100px;
-    height: 100px;
+@media screen and (max-width: 700px) {
+    .body-description{
+        display: block;
+    }
+    .body-container h1{
+        font-size: 50px;
+    }
+    figure img{
+        width: 300px;
+        height: 300px;
+    }
+    .description h2{
+        font-size: 30px;
+        font-family: inherit;
+    }
 }

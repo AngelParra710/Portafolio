@@ -1,27 +1,27 @@
-/*font-family: 'Fira Code', monospace;
-font-family: 'Roboto', sans-serif;
-*/
 :root{
     --background:#021524;
     --backgroundcontainer:#091f30;
     --colorblue:#0e61a1;
     --bluetext: #347CF8;
     --yellowText:#FFCA3A;
+    --red:#cf5c51;
 }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    background-color: var(--background);
     font-family: 'Roboto', sans-serif;
-    
 }
+
 html{
     scroll-behavior: smooth;
 }
-body::-webkit-scrollbar{
+
+/* body::-webkit-scrollbar{
     width: 8px;
     height: 8px;
 }
@@ -29,373 +29,230 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb {
     background: linear-gradient(var(--bluetext), var(--backgroundcontainer));
     border-radius: 4px;
-}
-.main{
-    width: 100%;
-    min-height: 100vh;
-    max-height: 1200px;
-    position: relative;
-}
-.maincontainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-}
-.cardmain{
-    width: 57%;
-    height: 400px;
-    background-color: var(--backgroundcontainer);
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(221, 220, 220, 0.692);
-}
-.containernav h2{
+} */
+nav p{
     font-family: 'Fira Code';
     font-size: 27px;
 }
-nav{
+.main{
+    position: relative;
     width: 100%;
-    height: 80px;
-    border-bottom: 3px solid white;
-    border-radius: 10px 10px 0px 0px;
+    min-height: 100vh;
+    background-color: var(--backgroundcontainer);
     color: white;
-    text-align: center;
-    background-color: var(--colorblue);
+}
+nav{
+    position: fixed;
+    padding-top: 10px;
+    width: 100%;
+    height: 50px ;
+    margin: 0 auto;
+    z-index: 10;
+    background-color: var(--background);
+    box-shadow: 5px 5px 8px rgba(255, 255, 255, 0.185);
+    top: 0;
+    left: 0;
+}
+.main-container{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 ul{
-    margin-top: 10px;
-    list-style-type: none;
+    padding-top: 3px;
 }
-ul li{
-    padding-right: 10px;
+li{
+    padding-top: 3px;
+    width: 90px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
     display: inline-block;
+    list-style: none;
+    transition-duration: 0.2s;
 }
-ul li a{
-    text-decoration: none;
+li:hover{
+    background-color: var(--red);
+}
+a{
     color: white;
+    text-decoration: none;
 }
-.contain{
+.body{
+    z-index: 1;
+    position: absolute;
+    top: 70px;
     width: 100%;
-}
-.cardcontain{
-    height: 280px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.containavatar img{
-    width: 250px;
-    height: 250px;
-}
-.containdescription{
     text-align: center;
 }
-.title{
-    margin: 3px;
-    font-size: 45px;
-    color: var(--bluetext)
-}
-.remark{
-    margin: 3px;
-    color: var(--yellowText);
-}
-.name{
-    margin: 3px;
-    color: var(--bluetext);
-    font-size: 30px;
-}
-.socialnetworks{
-    display: block;
-    width: 68%;
+.body-container{
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
     margin: 0 auto;
 }
-.socialnetworks img{
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
+.body-container h1{
+    font-size: 60px;
+}
+span{
+    color: var(--yellowText);
+}
+figure img{
+    width: 350px;
+    height: 350px;
+}
+
+.body-description{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    height: 100%;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.description h2{
+    font-size: 45px;
+    font-family: inherit;
+}
+
+.btn-primary{
+    border: 0px;
+    height: 40px;
+    width: 150px;
+    color: white;
+    margin: 10px;
+    font-size: 13px;
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.295);
+    background-color: var(--colorblue);
+    transition-duration: 0.5s;
+}
+.btn-primary:hover{
+    transform: scale(1.2);
+}
+.body-socialnetwork{
+    width: 100%;
+    text-align: center;
+    margin: 20px
+}
+.body-socialnetwork img{
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    transition-duration: 0.5s;
+}
+.body-socialnetwork img:hover{
+    transform: scale(1.2);
 }
 .wave{
     position: absolute;
-    bottom: 0;
-    z-index: -10;
-    background-image: url(../resources/wave.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../resources//wave.svg);
     width: 100%;
-    height: 200px;
+    height: 100px;
+    bottom: 0;
+    left: 0;
 }
-/*Sobre mi*/
+
+/* ABOUT ME */
+
+
 .about-me{
-    color: white;
     width: 100%;
     min-height: 100vh;
-    padding-top: 20px;
-}
-.content{
-    width: 80%;
-    margin: 0px auto;
+    background-color: #F3F4F5;
     text-align: center;
 }
-.divdescription{
+.about-me h1{
+    padding-top: 70px;
+    font-size: 60px;
+}
+
+.about-me span{
+    color: var(--bluetext);
+}
+.about-me article{
+    display: flex;
     width: 90%;
-    margin: 0 auto;
-    text-align: justify;
-}
-.about-title{
-    text-align: center;
-   font-size: 40px;
-   color: var(--yellowText);
+    margin: 40px auto;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .about-description{
-    font-size: 20px;
-    margin-top: 20px;
+    text-align: center;
+    width: 50%;
 }
-
-/*Skills*/
-
-.about-grid h3{
-    margin-top: 20px;
-    font-size: 30px;
+.about-me article img::before{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    content: '';
+    color: blue;
+    top: -10px;
+    left: -140px;
 }
-.container-skills{
+.about-me article img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.about-description p{
+    margin: 7px;
+}
+/* SKILLS */
+.skills{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--backgroundcontainer);
+    text-align: center;
+}
+.skills h1{
+    padding-top: 70px;
+    font-size: 40px;
+}
+article{
     width: 80%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 25px;
-    justify-content: center;
 }
-.figure-skills img{
+.container-cards{
+    padding-top: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    justify-items: center;
+}
+.card{
+    color: var(--bluetext);
+    background-color: white;
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px rgba(255, 255, 255, 0.472);
+    transition-duration: 0.5s;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card figure img{
     width: 100px;
     height: 100px;
 }
 
-
-/*Project*/
-.section-project{
-    width: 100%;
-    min-height: 100vh;
-    color: white;
-}
-.container-cards-grid{
-    margin: 30px auto 0;
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 0.5fr);
-    justify-items: center;
-}
-.card{
-    width: 300px;
-    height: 300px;
-    border-radius: 1rem;
-    background-color: whitesmoke;
-}
-img{
-    border-radius: 1rem 1rem;
-    width: 100%;
-    height: 200px;
-}
-
-.contain-description p{
-    margin-top: 10px;    
-    text-align: center;
-    font-size: 14px;
-    color: black;
-}
-.contain-description p a{ 
-    text-decoration: none;
-    font-family: inherit;
-    font-size: 20px;
-}
-/*QUERYS */
-
-@media screen and (max-width: 1100px) {
-    .container-social{
-        width: 65%;
-
-    }
-
-    .containercenter{
-        width: 80%;
-    }
-    .card{
-        width: 200px;
-        height: 200px;
-    }
-    img{
-        border-radius: 1rem 1rem;
-        width: 100%;
-        height: 100px;
-    }
-    .contain-description p{
-        margin-top: 10px;    
-        text-align: center;
-        font-size: 12px;
-        color: black;
-    }
-    .contain-description p a{ 
-        text-decoration: none;
-        font-family: inherit;
-        font-size: 16px;
-    }
-    .about-description{
-        font-size: 12px;
-        margin-top: 20px;
-    }
-}
-
-
-@media screen and (max-width: 950px){
-    .cardmain{
-        width: 80%;
-    }
-    .cardcontain{
+@media screen and (max-width: 1000px) {
+    .body-description{
         display: block;
-        text-align: center;
     }
-    .socialnetworks{
-        text-align: center;
+    figure img{
+        width: 250px;
+        height: 250px;
     }
-    .containavatar img{
-        width:170px;
-        height: 170px;
-    }
-    .title{
-        margin: 3px;
-        font-size: 35px;
-        color: var(--bluetext)
-    }
-    .remark{
-        margin: 3px;
-        color: var(--yellowText);
-    }
-    .name{
-        margin: 3px;
-        color: var(--bluetext);
-        font-size: 20px;
-    }
-    ul li{
-        padding-right: 5px;
-        margin: 0;
-    }
-    a{
-        font-size: 20px;
-    }
-}
-@media screen and (max-width: 800px){
-    .body{
-        display: block;
-        height: 300px;
-        text-align: center;
-    }
-    .container-social{
-        width: 70%;
-        justify-content: center;
-        margin: 0 auto;
-    }
-    .avatar{
-        margin: 0 auto;
-        width: 150px;
-        height: 150px;
-    }
-
-    ul li{
-        padding-right: 5px;
-        margin: 0;
-    }
-    a{
-        font-size: 15px;
-    }
-    .nav-menu{
-        width: 90%;
-        text-align: center;
-    }
-    nav{
+    figure{
         width: 100%;
-    }
-    .logo{
-        color: white;
-        font-size: 30px;
-    }
-    .listmenu{
-        font-size: 12px;
-    }
-    .container-cards-grid{
-        grid-template-columns: 1fr;
-    }
-    .card{
-        width: 40%;
-        height: 210px;
-        margin: 0 auto 20px;
-    }
-    img{
-        border-radius: 1rem 1rem;
-        width: 100%;
-        height: 130px;
-    }
-    .contain-description p{
-        margin-top: 5px;    
-        text-align: center;
-        font-size: 12px;
-        color: black;
-    }
-    .contain-description p a{ 
-        text-decoration: none;
-        font-family: inherit;
-        font-size: 16px;
-    }
-
-    .figure-skills img{
-        width: 70px;
-        height: 70px;
-    }
-    
-}
-@media screen and (max-width: 500px){
-    .title{
-        margin: 3px;
-        font-size: 25px;
-        color: var(--bluetext)
-    }
-    .remark{
-        margin: 3px;
-        color: var(--yellowText);
-    }
-    .name{
-        margin: 3px;
-        color: var(--bluetext);
-        font-size: 15px;
-    }
-    .containavatar img{
-        width: 190px;
-        height: 190px;
-    }
-
-    .card{
-        width: 70%;
-        height: 200px;
-        margin: 0 auto 20px;
-    }
-
-    ul li{
-        padding-right: 5px;
-        margin: 0;
-    }
-    a{
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 350px){
-    ul li{
-        padding-right: 5    px;
-        margin: 0;
-    }
-    a{
-        font-size: 13px;
-    }
-    .contain-description p{
-        font-size: 10px;
     }
 }
